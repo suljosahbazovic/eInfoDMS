@@ -1,0 +1,74 @@
+﻿@using System.Linq
+@using eInfoDMS.Data.Models
+@using eInfoDMS.Web.Helper
+@{
+    Korisnik korisnik = Autentifikacija.GetLogiraniKorisnik(Context);
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>eCRIMI - CASE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- Pixel Admin's stylesheets -->
+    <link href="~/Template/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Template/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Template/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/Template/dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Template/dist/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="~/Template/javascripts/ie.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+
+        @Html.Partial("_TopBar")
+
+        @Html.Partial("_LeftSideBar")
+
+        @RenderBody()
+        
+        @Html.Partial("_MainFooter")
+
+        @Html.Partial("_RightSidebar")
+
+        <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- Get jQuery from Google CDN -->
+    <!--[if !IE]>
+    <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">' + "<" + "/script>"); </script>
+    <![endif]-->
+    
+    <!--[if lte IE 9]>
+        <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">'+"<"+"/script>"); </script>
+    <![endif]-->
+    <!-- Pixel Admin's javascripts -->
+    <!-- jQuery 3 -->
+    <script src="~/Template/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/Template/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="~/Template/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Template/bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Template/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/Template/dist/js/demo.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidebar-menu').tree()
+        })
+    </script>
+</body>
+</html>

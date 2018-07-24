@@ -1,0 +1,48 @@
+﻿body {
+    background: url('/Content/images/criminalcase.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: -80px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+#clear {
+    /*color: inherit;*/
+    text-decoration: none;
+}
+
+.login-form {
+    width: 340px;
+    margin: 100px auto;
+}
+
+    .login-form form {
+        margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding: 15px;
+    }
+
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+
+.input-group-addon .fa {
+    font-size: 18px;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pull-right {
+    float: right !important;
+}

@@ -1,0 +1,17 @@
+﻿
+@using System.Linq
+@using eInfoDMS.Data.Models
+@using eInfoDMS.Web.Helper
+@{
+    Korisnik korisnik = Autentifikacija.GetLogiraniKorisnik(Context);
+
+}
+@if (korisnik.Zaposlenik != null && korisnik.Zaposlenik.Zaposlenja.Any(x => x.KorisnickaUloga == KorisnickaUloga.SuperAdministrator))
+{
+    @Html.Partial("_UlogaSuperAdmin")    
+}
+
+@if (korisnik.Zaposlenik != null && korisnik.Zaposlenik.Zaposlenja.Any(x => x.KorisnickaUloga == KorisnickaUloga.RadnikOpstePrakse))
+{
+    @Html.Partial("_UlogaRadnikOpstePrakse");    
+}
